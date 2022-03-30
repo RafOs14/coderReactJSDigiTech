@@ -1,13 +1,14 @@
 //Componente que dibuja el cuerpo de la pagina
-import React, {Component} from "react";
 import boostrap from "bootstrap/dist/css/bootstrap.css";
+import {Button, Wrapper} from "react-bootstrap";
 import ItemCount from "./ItemCount";
+import cougar from "../assets/cougar.jpg";
 
 
 //Declaramos la clase que va a renderizar el componente y recibir las props
-class ItemListContainer extends React.Component{
-    render(){
-        return (
+const ItemListContainer = ({greeting}) => {
+    //Declaramos el estado de la cantidad de items    
+        return (  
             <div className="container">
                 <div className="row">
                     <div className="col-12">
@@ -20,9 +21,9 @@ class ItemListContainer extends React.Component{
                                     <div className="col-12">
                                         <div className="table-responsive">
                                             {/*Utilizamos las props declaradas en el componente App.js*/}
-                                            {this.props.greeting}
+                                            {greeting}
                                             {/*Llamamos al componente ItemCount y le pasamos dos parametros*/}
-                                            <ItemCount stock="10" initial="1"/>
+                                            <ItemCount />
                                         </div>
                                     </div>
                                 </div>
@@ -30,11 +31,9 @@ class ItemListContainer extends React.Component{
                         </div>
                     </div>
                 </div>
-            </div>
-        );        
-    };  
+            </div>        
+        );          
 }
-
 
 //Exportamos el componente
 export default ItemListContainer;
