@@ -1,30 +1,16 @@
-import React, {Component} from "react";
+//Componente que dibuja el icono del carrito, el cual se usara en el navbar
 import boostrap from "bootstrap/dist/css/bootstrap.css";
-import {Button,Card, Form} from "react-bootstrap";
-import cougar from "../assets/cougar.jpg";
+import {Badge} from "@material-ui/core";
+import { ShoppingCartOutlined } from "@material-ui/icons";
 
-function ItemCount({stock, initial, onAdd}) {
-  return (
-    <div className="d-flex">
-        <Card style={{width: '20rem'}}>
-            <Card.Img variant="top" src={cougar} />
-            <Card.Body>
-                <Card.Title>Auriculares Cougar</Card.Title>
-                <Card.Text>
-                    <span className="fw-bold">Precio:</span> $1.000
-                </Card.Text>
-                <Card.Text>                
-                    <Button variant="outline-primary" onClick={onAdd}>-</Button>
-                    <span className="mx-5">{initial}</span>                
-                    <Button variant="outline-primary">+</Button>                
-                </Card.Text>
-                <Button  variant="outline-primary" size="lg">Agregar al carrito</Button>
-            </Card.Body>        
-        </Card>
-    </div>
-  );
+//Declaramos la clase y lo que se va a renderizar
+const CartWidget = () => {  
+        return (
+            <Badge badgeContent={4} color="primary">
+                <ShoppingCartOutlined style={{color : "white"}}/>
+            </Badge>
+        );    
 }
-      
 
 //Exportamos el componente
-export default ItemCount;
+export default CartWidget;
