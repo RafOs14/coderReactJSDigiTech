@@ -3,10 +3,10 @@ import ItemListContainer from '../components/ItemListContainer';
 
 const  Home = () => {
   return (
-        <div>
-          <NavBar />
-          <ItemListContainer greeting="Proximamente"/>
-        </div>
+      <>
+        <NavBar />
+        <ItemListContainer />
+      </>        
   );
         
 }
