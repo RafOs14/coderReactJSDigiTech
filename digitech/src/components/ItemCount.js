@@ -26,9 +26,9 @@ export default function ItemCount ({stock, initial, onAdd}) {
         return (
             <div className="d-grid gap-2">
                 <div className="mx-4 text-center">
-                <Button variant="outline-danger" onClick={remove}><Remove /></Button>
+                <Button variant="outline-danger" size="sm" onClick={remove}><Remove /></Button>
                     <span className="mx-5">{initial}</span>
-                <Button variant="outline-success" onClick={add}><Add /></Button>
+                <Button variant="outline-success" size="sm" onClick={add}><Add /></Button>
                 </div>                        
                 <div className="d-grid gap-2">
                     {
@@ -40,4 +40,3 @@ export default function ItemCount ({stock, initial, onAdd}) {
             </div>
         );    
 }
-
