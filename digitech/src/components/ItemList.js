@@ -4,8 +4,8 @@ import Item from "./Item";
 
 const ItemList = ({ items }) => {
     return (
-        <Container flex>  
-            <Row>                    
+        <Container>  
+            <Row className="m-auto align-self-center">                    
                 { 
                     //Recorremos el arreglo de productos para mostrarlo en pantalla
                     items.length > 0
