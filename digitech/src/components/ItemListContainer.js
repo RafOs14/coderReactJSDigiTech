@@ -6,11 +6,6 @@ import { getProducts } from "../utils/products";
 //Componente que contiene a los artículos
 const ItemListContainer = () => {
     const [datos, setProductos] = useState([]);
-
-    //Mostramos una alerta al agregar los items
-    const onAdd = (items) => {
-        alert(`${items} items added to cart`);
-    }
     
     useEffect(() => {
         //Obtenemos los productos con una promesa
@@ -22,7 +17,7 @@ const ItemListContainer = () => {
         }, []);
 
         return (               
-            <ItemList items={datos} initial={1} onAdd={onAdd}/>           
+            <ItemList items={datos} />           
         );          
 }
 
