@@ -3,14 +3,14 @@ import ItemCount from "./ItemCount";
 
 export default function Item ({ id, title, stock, cost, brand, image }) {
 
-      //Mostramos una alerta al agregar los items
-    const onAdd = (items) => {
-        alert(`${items} items added to cart`);
-    }
+        //Mostramos una alerta al agregar los items
+        const onAdd = (items) => {
+            alert(`${items} items added to cart`);
+        }
 
     return ( 
         <Col className="mt-3">
-            <Card key={id} style={{ width: '19rem' }} >
+            <Card key={id} style={{ width : '18rem' }} >
                 <CardImg top width="100%" src={image} alt="Card image cap" />
                     <Card.Body>
                         <Card.Title className="text-center font-weight-bolder" style={{ color : 'blue'}}>{title}</Card.Title>
