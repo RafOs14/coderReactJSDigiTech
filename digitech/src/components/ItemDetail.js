@@ -20,13 +20,14 @@ const ItemDetail = ({ id, title, desc, stock, cost, brand, image }) => {
                     <Card style={{ width : 'auto' }}>
                         <Card.Header className="text-center font-weight-bolder" style={{ color : 'blue'}}>{title}</Card.Header>
                         <Card.Body> 
-                            <Card.Text className="font-weight-bolder" style={{ color : 'blue' }}> {desc}</Card.Text>                     
-                            <Card.Text className="font-weight-bolder" style={{ color : 'red' }}>USD: {cost}</Card.Text>                     
-                            <Card.Text className="text-center">Brand: {brand}</Card.Text>
-                            <Card.Text className="text-center mt-2">Stock en depósito: {stock}</Card.Text>
+                            <Card.Text className="font-weight-bolder"> {desc}</Card.Text>                     
+                            <Card.Text className="fs-3 fw-bold" style={{ color : 'red' }}>USD: {cost}</Card.Text>                                                       
                             <CardContent className="align-items-right">
                                 <Row>
-                                    <Col></Col>
+                                    <Col>
+                                        <Card.Text className="text-center">Brand: {brand}</Card.Text>
+                                        <Card.Text className="text-center mt-2">Stock en depósito: {stock}</Card.Text>
+                                    </Col>
                                     <Col><ItemCount stock={stock} initial={1} onAdd={onAdd}/></Col>
                                 </Row>
                             </CardContent>
