@@ -17,7 +17,7 @@ export default function Item ({ id, title, stock, cost, brand, image }) {
                         <Card.Subtitle className="text-center font-weight-bolder" style={{ color : 'red' }}>USD: {cost}</Card.Subtitle>
                         <Card.Text className="text-center"></Card.Text>
                         <Card.Text className="text-center">Brand: {brand}</Card.Text>                                
-                        <ItemCount stock={5} initial={1} onAdd={onAdd}/>
+                        <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
                         <Card.Text className="text-center mt-2">Stock: {stock}</Card.Text>
                     </Card.Body>
                 </Card>
