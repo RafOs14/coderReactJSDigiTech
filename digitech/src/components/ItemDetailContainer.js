@@ -1,7 +1,8 @@
 //Componente que dibuja el cuerpo de la pagina
 import { useEffect, useState } from "react";
-import ItemDetail from "./ItemDetail";
+//import ItemDetail from "./ItemDetail";
 import { getProducts } from "../utils/products";
+import ItemList from "./ItemList";
 
 const ItemDetailContainer = () => {
     const [datos, setProductos] = useState([]);
@@ -16,7 +17,7 @@ const ItemDetailContainer = () => {
         }, []);
 
         return (               
-            <ItemDetail items={datos} />           
+            <ItemList items={datos} />           
         );          
 }
 
