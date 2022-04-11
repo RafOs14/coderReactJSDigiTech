@@ -1,23 +1,23 @@
 //Componente que dibuja el cuerpo de la pagina
 import { useEffect, useState } from "react";
-//import ItemDetail from "./ItemDetail";
-import { getProducts } from "../utils/products";
-import ItemList from "./ItemList";
+import { useParams } from "react-router-dom";
+import customFetch from "../utils/customFetch";
+import ItemDetail from "./ItemDetail";
+const {products} = require('../utils/products');
 
 const ItemDetailContainer = () => {
     const [datos, setProductos] = useState([]);
+    const { idItem } = useParams();
     
     useEffect(() => {
         //Obtenemos los productos con una promesa
-        async function fetchData() {
-            let data = await getProducts();
-            setProductos(data);
-            }
-        fetchData();
-        }, []);
+        customFetch(3000, products.find(item => item.id === parseInt(7)))
+            .then(result => setProductos(result))
+            .catch(error => console.log(error));
+        }, [datos]);
 
         return (               
-            <ItemList items={datos} />           
+            <ItemDetail item={datos} />           
         );          
 }
 
