@@ -1,16 +1,21 @@
 import ItemCount from "./ItemCount";
-import { Col, Container, Card, CardImg, Row } from "react-bootstrap";
-import React from "react";
+import { useState } from "react";
+import { Col, Container, Card, CardImg, Row, Button } from "react-bootstrap";
 import { CardContent } from "@material-ui/core";
+import { Link } from "react-router-dom";
+import { ShoppingCartOutlined } from "@material-ui/icons";
 
 const ItemDetail = ({ item }) => {
+    const [itemCount, setItemCount] = useState(0);
 
     //Mostramos una alerta al agregar los items
-    const onAdd = (items) => {
-        alert(`${items} items added to cart`);
+    const onAdd = (sum) => {
+        alert(`${sum} items added to cart`);
+        setItemCount(sum);
     }
 
-    return(                 
+    return( 
+        //Mostramos los detalles del producto 
         <>
         {item && item.image
             ?               
@@ -32,7 +37,10 @@ const ItemDetail = ({ item }) => {
                                         <Card.Text className="text-center mt-2">Stock en depósito: {item.stock}</Card.Text>
                                     </Col>
                                     <Col>
-                                         <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
+                                    {   itemCount === 0
+                                        ?<ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
+                                        : <Link to='/cart' style={{textDecoration: "none"}}><Button variant="primary" size="lg">CheckOut <ShoppingCartOutlined style={{color : "white"}}/></Button></Link>
+                                    }
                                     </Col>
                                 </Row>
                             </CardContent>
@@ -43,8 +51,9 @@ const ItemDetail = ({ item }) => {
         </Container> 
         : <div className="text-center mt-3">Products will be displayed in an instant...</div>
         }    
-        </>        
+        </>  
     );
 }
 
+//Exportamos el componente
 export default ItemDetail;
