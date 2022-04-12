@@ -28,13 +28,13 @@ export default function ItemCount ({stock, initial, onAdd}) {
             <div className="d-grid gap-2">
                 <div className="mx-4 text-center">
                     <Button variant="outline-danger" size="sm" onClick={remove}><Remove /></Button>
-                        <span className="mx-3">Cantidad: {count} unidades.</span>
+                        <span className="mx-2">Cantidad: {count} unidades.</span>
                     <Button variant="outline-success" size="sm" onClick={add}><Add /></Button>
                 </div>                        
                 <div className="d-grid gap-2 mt-2">
                     {/*Mostramos el boton de agregar al carrito, si el producto no tiene stock, lo deshabilitamos*/}
                     {
-                        stock
+                        stock && count
                         ?<Button variant="primary" size="lg" onClick={() => onAdd(count)}>Add to Cart</Button>
                         :<Button variant="danger" size="lg" disabled>Out of Stock</Button>
                     }                         

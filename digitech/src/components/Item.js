@@ -1,5 +1,4 @@
 import { Col, Card, CardImg} from "react-bootstrap";
-import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 
 export default function Item ({ id, title, stock, cost, brand, image }) {
@@ -18,8 +17,7 @@ export default function Item ({ id, title, stock, cost, brand, image }) {
                     <Card.Subtitle className="text-center font-weight-bolder" style={{ color : 'red' }}>USD: {cost}</Card.Subtitle>
                     <Card.Text></Card.Text>
                     <Card.Text className="text-center"><Link to={`/item/${id}`}>See Description</Link></Card.Text>
-                    <Card.Text className="text-center">Brand: {brand}</Card.Text>                                
-                    <ItemCount stock={stock} initial={1} onAdd={onAdd}/>
+                    <Card.Text className="text-center">Brand: {brand}</Card.Text>                                                    
                     <Card.Text className="text-center mt-2">Stock: {stock}</Card.Text>
                 </Card.Body>
             </Card>
