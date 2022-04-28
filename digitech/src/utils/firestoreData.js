@@ -7,7 +7,7 @@ import db from "../utils/firebase";
 export const getFirestoreData = async (idCategory) => {
     let sql;
     if (idCategory) {
-        sql = query(collection(db, "products"), where('categoryId', '==', idCategory));
+        sql = query(collection(db, "products"), where('idCategory', '==', idCategory));
     } else {
         sql = query(collection(db, "products"), orderBy('price', 'asc'));
     }
