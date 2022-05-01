@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/coderReactJSDigiTech/static/css/main.1e478349.css",
+    "main.js": "/coderReactJSDigiTech/static/js/main.a4804c21.js",
+    "static/media/slide7.jpg": "/coderReactJSDigiTech/static/media/slide7.745a847cfe64d21c337b.jpg",
+    "static/media/slide1.jpg": "/coderReactJSDigiTech/static/media/slide1.5d1b6b21e33dce235005.jpg",
+    "static/media/slide2.jpg": "/coderReactJSDigiTech/static/media/slide2.0658723f076a25003dd5.jpg",
+    "static/media/slide5.jpg": "/coderReactJSDigiTech/static/media/slide5.6fee603289e449b0b228.jpg",
+    "static/media/slide4.jpg": "/coderReactJSDigiTech/static/media/slide4.b44cc26da9faa55d6b69.jpg",
+    "static/media/slide3.jpg": "/coderReactJSDigiTech/static/media/slide3.f43161539d1121f6618e.jpg",
+    "static/media/slide6.jpg": "/coderReactJSDigiTech/static/media/slide6.bcfeef5554a7303038c6.jpg",
+    "index.html": "/coderReactJSDigiTech/index.html",
+    "main.1e478349.css.map": "/coderReactJSDigiTech/static/css/main.1e478349.css.map",
+    "main.a4804c21.js.map": "/coderReactJSDigiTech/static/js/main.a4804c21.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e478349.css",
+    "static/js/main.a4804c21.js"
+  ]
+}
