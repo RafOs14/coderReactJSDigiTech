@@ -7,6 +7,7 @@ This project was build for the React course of CoderHouse.
 
 - ![App Screenshot](https://drive.google.com/file/d/16kAsi5bE0lAZX3lRExJQ3eIIKqbKVWH9/view?usp=sharing)
 - ![App_Screenshot](https://drive.google.com/file/d/16o-xp3QpbevdFDF_qnhXLbrFdWff0-RE/view?usp=sharing)
+- Both files are attached in the repository
 
 
 ## Content
